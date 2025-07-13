@@ -1,4 +1,4 @@
-# Student Management System – Grails (using Java) + JWT Authentication
+# Student Management Application – Grails (using Java + Groovy) + JWT Authentication
 
 A secure and role-based Student Management System built with **Grails (Using Java)** backend and **JWT (JSON Web Token)** authentication. Supports role-based access for **Admin**, **Teacher**, and **Student** users. Frontend is integrated via **Stencil.js** and login uses secure cookies.
 
