@@ -1,0 +1,101 @@
+info:
+  app:
+    name: '@info.app.name@'
+    version: '@info.app.version@'
+    grailsVersion: '@info.app.grailsVersion@'
+grails:
+  cors:
+    enabled: true
+    allowedOrigins:
+      - http://localhost:3333
+    allowedMethods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+    allowedHeaders:
+      - Authorization
+      - Content-Type
+  plugin:
+    springsecurity:
+      useSessionCreation: false
+      userLookup:
+        userDomainClassName: 'com.practice.demo.User'
+        authorityJoinClassName: 'com.practice.demo.UserRole'
+      authority:
+        className: 'com.practice.demo.Role'
+      auth:
+        loginFormUrl: '/login/page'
+      rest:
+        login:
+          active: false
+          endpointUrl: '/api/login'
+          useJsonCredentials: true
+        logout:
+          endpointUrl: '/api/logout'
+        token:
+          storage:
+            jwt:
+              enabled: true
+              secret: '5554a0e3899f27717fbda1d7082ffe2d6af972f1dcc07b8b47debhuihtyftftftftftuftuftufutftftftftfftyftyftyftfyfytyrfyrftftffyffuyftuffftfytftftyftfutftufuffuftft54082bd9152'
+              expiration: 36000
+          validation:
+            headerName: 'Authorization'
+            headerPrefix: 'Bearer '
+          rendering:
+            usernamePropertyName: 'username'
+            authoritiesPropertyName: 'roles'
+
+  views:
+    default:
+      codec: html
+  mime:
+    disable:
+      accept:
+        header:
+          userAgents:
+            - Gecko
+            - WebKit
+            - Presto
+            - Trident
+    types:
+      json:
+        - application/json
+        - text/json
+      hal:
+        - application/hal+json
+        - application/hal+xml
+      xml:
+        - text/xml
+        - application/xml
+      atom: application/atom+xml
+      css: text/css
+      csv: text/csv
+      js: text/javascript
+      rss: application/rss+xml
+      text: text/plain
+      all: '*/*'
+  codegen:
+    defaultPackage: com.practice.demo
+  profile: rest-api
+dataSource:
+  pooled: true
+  jmxExport: true
+  driverClassName: org.postgresql.Driver
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  username: postgres
+  password: root
+  url: jdbc:postgresql://localhost:5432/demo_database
+  dbCreate: update
+hibernate:
+  cache:
+    queries: false
+    use_second_level_cache: false
+    use_query_cache: false
+logging:
+  level:
+    org.springframework.security: DEBUG
+    grails.plugin.springsecurity: DEBUG
+    grails.app.controllers: DEBUG
+    grails.plugin.springsecurity.rest: DEBUG
+    com.practice.demo: DEBUG

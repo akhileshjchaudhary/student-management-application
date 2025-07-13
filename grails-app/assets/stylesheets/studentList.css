@@ -1,0 +1,66 @@
+/* Styles specific to index.gsp */
+.student-list-container {
+    max-width: 900px;
+
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-list-container h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.student-list-container .flash-message {
+    text-align: center;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.student-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.student-list-container th, .student-list-container td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.student-list-container th {
+    background-color: #007bff;
+    color: white;
+}
+
+.student-list-container tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.student-list-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.student-list-container a:hover {
+    text-decoration: underline;
+}
+
+.student-list-container .delete-link {
+    color: #dc3545;
+}
+
+.student-list-container .create-link {
+    display: inline-block;
+    display: inline-block;
+    margin-top: 15px;
+    color: #28a745;
+}

@@ -1,0 +1,41 @@
+/* Styles specific to adminDashboard.gsp */
+.admin-dashboard-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard-container h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.admin-dashboard-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-dashboard-container li {
+    margin: 10px 0;
+}
+
+.admin-dashboard-container a {
+    display: block;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.admin-dashboard-container a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,74 @@
+/* Styles specific to teacherDashboard.gsp */
+.teacher-dashboard-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-dashboard-container h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard-container h3 {
+    color: #495057;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.teacher-dashboard-container .flash-message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard-container .flash-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.teacher-dashboard-container .flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.teacher-dashboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.teacher-dashboard-container th, .teacher-dashboard-container td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.teacher-dashboard-container th {
+    background-color: #007bff;
+    color: white;
+}
+
+.teacher-dashboard-container tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.teacher-dashboard-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.teacher-dashboard-container a:hover {
+    text-decoration: underline;
+}
+
+.teacher-dashboard-container .logout-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #dc3545;
+}

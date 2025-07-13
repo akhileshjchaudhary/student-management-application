@@ -1,0 +1,117 @@
+buildscript {
+    repositories {
+        maven { url "https://repo.grails.org/grails/core" }
+        mavenCentral()
+    }
+    dependencies { // Not Published to Gradle Plugin Portal
+        classpath "org.grails:grails-gradle-plugin:6.2.4"
+        classpath "org.grails.plugins:hibernate5:8.1.0"
+        classpath "org.grails.plugins:views-gradle:3.2.3"
+    }
+}
+
+plugins {
+    id "groovy"
+    id "org.grails.plugins.views-json" version "3.2.3"
+    id "war"
+    id "idea"
+    id "application"
+    id "eclipse"
+}
+
+// Not Published to Gradle Plugin Portal
+apply plugin: "org.grails.grails-web"
+
+group = "com.practice.demo"
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.grails.org/grails/core/" }
+}
+
+configurations {
+    all {
+    }
+}
+
+dependencies {
+    profile "org.grails.profiles:rest-api"
+    implementation "org.grails:grails-core"
+    implementation "org.grails:grails-logging"
+    implementation "org.grails:grails-plugin-databinding"
+    implementation "org.grails:grails-plugin-i18n"
+    implementation "org.grails:grails-plugin-interceptors"
+    implementation "org.grails:grails-plugin-rest"
+    implementation "org.grails:grails-plugin-services"
+    implementation "org.grails:grails-plugin-url-mappings"
+    implementation "org.grails:grails-web-boot"
+    implementation "org.grails.plugins:hibernate5"
+    implementation "org.grails.plugins:views-json"
+    implementation "org.grails.plugins:views-json-templates"
+    implementation "org.springframework.boot:spring-boot-autoconfigure"
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation "org.springframework.boot:spring-boot-starter-logging"
+    implementation "org.springframework.boot:spring-boot-starter-tomcat"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+    compileOnly "io.micronaut:micronaut-inject-groovy"
+    console "org.grails:grails-console"
+    runtimeOnly "com.h2database:h2"
+    runtimeOnly "org.apache.tomcat:tomcat-jdbc"
+    testImplementation "io.micronaut:micronaut-inject-groovy"
+    testImplementation "org.grails:grails-gorm-testing-support"
+    testImplementation "org.grails:views-json-testing-support"
+    testImplementation "org.spockframework:spock-core"
+
+    // added dependencies
+
+    implementation("org.grails.plugins:spring-security-core:6.1.2")
+    implementation("org.grails.plugins:spring-security-rest:5.0.1")
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+    implementation 'org.grails:grails-web-boot:6.2.3'
+
+    implementation 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.2'
+
+
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    runtimeOnly 'org.postgresql:postgresql:42.7.7'
+
+
+//    implementation 'org.webjars:bootstrap:5.3.3'
+//    implementation 'org.webjars:font-awesome:6.5.2'
+//    implementation "com.siprell.plugins:bootstrap-framework:1.0.3"
+
+//    implementation "org.grails.plugins:asset-pipeline:4.5.0"
+
+    implementation 'org.webjars:bootstrap:5.3.3'
+    implementation 'org.webjars:font-awesome:6.5.2'
+
+    runtimeOnly 'com.bertramlabs.plugins:asset-pipeline-grails:4.3.0'
+}
+
+application {
+    mainClass = "com.practice.demo.Application"
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("17")
+    targetCompatibility = JavaVersion.toVersion("17")
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
+
+//bootstrapFramework = [
+//        version: "5.3.3",
+//        cssPath: "grails-app/assets/stylesheets",
+//        jsPath: "grails-app/assets/javascripts",
+//        useIndividualJs: false,
+//        fontAwesome: [
+//                install: true,
+//                version: "6.5.2"
+//        ]
+//]
